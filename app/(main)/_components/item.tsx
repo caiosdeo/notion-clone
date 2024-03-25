@@ -17,7 +17,7 @@ import {
   DropdownMenuTrigger,
   DropdownMenuContent,
   DropdownMenuItem,
-  DropdownMenuSeparator
+  DropdownMenuSeparator,
 } from "@/components/ui/dropdown-menu";
 
 interface ItemProps {
@@ -74,7 +74,6 @@ export const Item = ({
   };
 
   const onArchive = (event: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
-    
     if (!id) return;
 
     event.stopPropagation();
@@ -110,7 +109,7 @@ export const Item = ({
         </div>
       )}
       {documentIcon ? (
-        <div>{documentIcon}</div>
+        <div className="shrink-0 mr-2 text-[18px]">{documentIcon}</div>
       ) : (
         <Icon className="shrink-0 h-[18px] mr-2 text-muted-foreground" />
       )}
@@ -123,20 +122,15 @@ export const Item = ({
       {!!id && (
         <div className="ml-auto flex items-center gap-x-2">
           <DropdownMenu>
-            <DropdownMenuTrigger
-              onClick={(e) => e.stopPropagation()}
-              asChild
-            >
-              <div role="button" className="opacity-0 group-hover:opacity-100 h-full ml-auto rounded-sm hover:bg-neutral-300 dark:bg-neutral-600">
+            <DropdownMenuTrigger onClick={(e) => e.stopPropagation()} asChild>
+              <div
+                role="button"
+                className="opacity-0 group-hover:opacity-100 h-full ml-auto rounded-sm hover:bg-neutral-300 dark:bg-neutral-600"
+              >
                 <MoreHorizontal className="h-4 w-4 text-muted-foreground" />
               </div>
             </DropdownMenuTrigger>
-            <DropdownMenuContent
-              className="w-60"
-              align="start"
-              side="right"
-              forceMount
-            >
+            <DropdownMenuContent className="w-60" align="start" side="right" forceMount>
               <DropdownMenuItem onClick={onArchive}>
                 <Trash className="h-4 w-4 mr-2" />
                 Delete
@@ -154,7 +148,6 @@ export const Item = ({
           >
             <Plus className="h-4 w-4 text-muted-foreground" />
           </div>
-
         </div>
       )}
     </div>
