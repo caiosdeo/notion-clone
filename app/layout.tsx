@@ -12,7 +12,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Taking Notes",
-  description: "A Notion clone",
+  description: "The connected note taking app where better, faster work happens.",
   icons: {
     icon: [
       {

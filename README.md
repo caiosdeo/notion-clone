@@ -10,3 +10,7 @@ This repository is for Taking Notes, a Notion clone, built with Next.js 14, reac
 - Authentication
 - File upload, deletion and replacement
 - Publish note on the web
+
+## Visit
+
+Access Taking Notes [here](https://takingnotes.vercel.app/).
