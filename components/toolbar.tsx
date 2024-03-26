@@ -109,7 +109,8 @@ export const Toolbar = ({ initialData, preview }: ToolbarProps) => {
         )}
       </div>
       {isEditing && !preview ? (
-        <TextareaAutosize
+        <TextareaAutosize 
+          value={title}
           ref={inputRef}
           onBlur={disableInput}
           onKeyDown={onKeyDown}
